@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 const pageTitle = "About Me";
 
@@ -16,6 +16,9 @@ const happy = true;
 const finished = false;
 const goal = 3;
 
+const skillColor = "orange";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html lang="en">
@@ -25,7 +28,6 @@ const goal = 3;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-
   </head>
   <body>
     <a href="/">Home</a>
@@ -80,3 +82,18 @@ const goal = 3;
     }
   </body>
 </html>
+
+<style>
+  h1 {
+    color: #bada55;
+    font-size: 4rem;
+  }
+</style>
+
+<style define:vars={{ skillColor, fontWeight, textCase }}>
+  .skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+</style>
